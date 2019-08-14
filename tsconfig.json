@@ -1,18 +1,13 @@
 {
-    "compilerOptions": {
-        "alwaysStrict": true,
-        "module": "commonjs",
-        "outDir": "./lib",
-        "removeComments": true,
-        "declaration": true,
-        "target": "es6"
-    },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts",
-        "**/__tests__/*"
-    ]
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "module": "es6",
+    "outDir": "./lib",
+    "removeComments": true,
+    "declaration": true,
+    "target": "es6",
+    "lib": ["esnext.asynciterable"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/__tests__/*"]
 }
