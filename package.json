@@ -1,6 +1,6 @@
 {
   "name": "change-stream-to-async-iterator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn any MongoDB Change Stream into an async iterator.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
