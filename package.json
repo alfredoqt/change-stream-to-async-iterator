@@ -2,9 +2,18 @@
   "name": "change-stream-to-async-iterator",
   "version": "1.0.0",
   "description": "Turn any MongoDB Change Stream into an async iterator.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -20,5 +29,20 @@
   "bugs": {
     "url": "https://github.com/alfredoqt/change-stream-to-async-iterator/issues"
   },
-  "homepage": "https://github.com/alfredoqt/change-stream-to-async-iterator#readme"
+  "homepage": "https://github.com/alfredoqt/change-stream-to-async-iterator#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/mongodb": "^3.2.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
