@@ -66,4 +66,4 @@ Follow this [link](https://docs.mongodb.com/manual/changeStreams/) to learn more
 
 ## License
 
-Licensed under the MIT License, Copyright copyright 2019 Maximilian Stoiber. See [LICENSE](https://github.com/alfredoqt/change-stream-to-async-iterator/blob/master/LICENSE) for more information.
+Licensed under the MIT License, Copyright copyright 2019 Alfredo Quintero Tlacuilo. See [LICENSE](https://github.com/alfredoqt/change-stream-to-async-iterator/blob/master/LICENSE) for more information.
